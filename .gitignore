@@ -1,0 +1,94 @@
+# Node.js (Next.js) related
+node_modules/
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Build and dependencies
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Firebase & Deployment
+.firebase/
+.firebaserc
+.firebase.json
+functions/node_modules/
+
+# Coverage & Test
+coverage/
+jest.config.js
+jest.setup.js
+cypress/
+cypress.env.json
+*.snap
+
+# Misc
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# -------- Python (Flask & FastAPI) Specific --------
+
+# Virtual environment
+venv/
+.env/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Flask / FastAPI Specific
+instance/
+*.db
+*.sqlite3
+migrations/
+
+# Python dependencies
+Pipfile
+Pipfile.lock
+poetry.lock
+requirements.txt
+
+# Pytest, coverage, and logs
+.coverage
+htmlcov/
+pytest_cache/
+*.cover
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+
+# MyPy
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Docker
+docker-compose.override.yml
