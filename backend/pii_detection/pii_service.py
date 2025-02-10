@@ -8,15 +8,19 @@ analyzer = AnalyzerEngine()
 @app.route("/detect-pii", methods=["POST"])
 def detect_pii():
     try:
-        print("Headers:", request.headers)  # Log headers
-        print("Content-Type:", request.content_type)  # Check content type
-        print("Files:", request.files)  # Debug uploaded files
+        print("Headers:", request.headers)
+        print("Content-Type:", request.content_type)
+        print("Files Received:", request.files)
 
         if "file" not in request.files:
             return jsonify({"error": "No file uploaded. Ensure 'file' is in form-data."}), 400
 
         file = request.files["file"]
         df = pd.read_csv(file)
+
+        if df.empty:
+            return jsonify({"error": "Uploaded CSV file is empty."}), 400
+
         pii_results = {}
 
         for column in df.columns:
@@ -35,9 +39,11 @@ def detect_pii():
             if pii_values:
                 pii_results[column] = pii_values
 
+        print("PII Detection Output:", pii_results)
         return jsonify({"pii_values": pii_results})
 
     except Exception as e:
+        print("Error in PII Detection:", str(e))
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
