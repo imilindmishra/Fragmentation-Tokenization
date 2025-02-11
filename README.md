@@ -8,14 +8,7 @@ A secure, scalable solution for PII protection that leverages AI-driven detectio
 
 - [Overview](#overview)
 - [Features](#features)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Setup and Installation](#setup-and-installation)
-  - [Backend (Node.js/Express)](#backend-nodejsexpress)
-  - [PII Detection Service (Flask)](#pii-detection-service-flask)
-- [Usage](#usage)
-- [Comparison: Masking + QFT vs Traditional Tokenization](#comparison-masking--qft-vs-traditional-tokenization)
-- [License](#license)
+
 
 ---
 
